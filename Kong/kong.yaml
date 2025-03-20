@@ -1,0 +1,33 @@
+_format_version: "3.0"
+
+services:
+  # Question App Service
+  - name: question-service
+    url: http://10.0.0.4:4000 # Question app private IP and port
+    routes:
+      - name: question-route
+        paths:
+          - /questionapp # Redirects to the root of the question app
+        strip_path: true # Keep the '/questionapp' path when forwarding
+
+  # Submit App Service
+  - name: submit-service
+    url: http://10.0.0.5:4200 # Submit app private IP and port
+    routes:
+      - name: submit-route
+        paths:
+          - /submitapp # Redirects to the root of the submit app
+        strip_path: true # Keep the '/submitapp' path when forwarding
+
+plugins:
+  - name: rate-limiting
+    service: question-service
+    config:
+      minute: 30
+      policy: local
+
+  - name: rate-limiting
+    service: submit-service
+    config:
+      minute: 30
+      policy: local

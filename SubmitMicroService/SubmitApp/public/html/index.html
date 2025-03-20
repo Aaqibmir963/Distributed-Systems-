@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submit a New Question</h1>
+
+      <form id="submit-form">
+        <div class="form-group">
+          <label for="question">Question:</label>
+          <textarea id="question" name="question" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="category-select">Category:</label>
+          <select id="category-select" name="category"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="new-category">Or add a new category:</label>
+          <input type="text" id="new-category" name="new-category" />
+        </div>
+
+        <h3>Answers (Check correct answer)</h3>
+
+        <div class="answers-container">
+          <div class="answer-input">
+            <input
+              type="radio"
+              name="correct-answer"
+              id="correct-0"
+              value="0"
+              required
+            />
+            <input type="text" id="answer-0" placeholder="Answer 1" required />
+          </div>
+
+          <div class="answer-input">
+            <input
+              type="radio"
+              name="correct-answer"
+              id="correct-1"
+              value="1"
+            />
+            <input type="text" id="answer-1" placeholder="Answer 2" required />
+          </div>
+
+          <div class="answer-input">
+            <input
+              type="radio"
+              name="correct-answer"
+              id="correct-2"
+              value="2"
+            />
+            <input type="text" id="answer-2" placeholder="Answer 3" required />
+          </div>
+
+          <div class="answer-input">
+            <input
+              type="radio"
+              name="correct-answer"
+              id="correct-3"
+              value="3"
+            />
+            <input type="text" id="answer-3" placeholder="Answer 4" required />
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn">Submit Question</button>
+      </form>
+
+      <div id="message" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

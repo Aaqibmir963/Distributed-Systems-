@@ -1,0 +1,338 @@
+[{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e209297"
+  },
+  "id": 1,
+  "category": "General Knowledge",
+  "question": "What is the capital of France?",
+  "answers": [
+    {
+      "text": "Paris",
+      "isCorrect": true
+    },
+    {
+      "text": "London",
+      "isCorrect": false
+    },
+    {
+      "text": "Berlin",
+      "isCorrect": false
+    },
+    {
+      "text": "Madrid",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e209298"
+  },
+  "id": 2,
+  "category": "General Knowledge",
+  "question": "\"What Planet are we on?",
+  "answers": [
+    {
+      "text": "Venus",
+      "isCorrect": false
+    },
+    {
+      "text": "Earth",
+      "isCorrect": true
+    },
+    {
+      "text": "Jupiter",
+      "isCorrect": false
+    },
+    {
+      "text": "Saturn",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e209299"
+  },
+  "id": 3,
+  "category": "Sports",
+  "question": "Which sport uses a shuttlecock?",
+  "answers": [
+    {
+      "text": "Tennis",
+      "isCorrect": false
+    },
+    {
+      "text": "Squash",
+      "isCorrect": false
+    },
+    {
+      "text": "Badminton",
+      "isCorrect": true
+    },
+    {
+      "text": "Table Tennis",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929a"
+  },
+  "id": 4,
+  "category": "Sports",
+  "question": "How many players are there in a standard soccer team?",
+  "answers": [
+    {
+      "text": "9",
+      "isCorrect": false
+    },
+    {
+      "text": "10",
+      "isCorrect": false
+    },
+    {
+      "text": "11",
+      "isCorrect": true
+    },
+    {
+      "text": "12",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929b"
+  },
+  "id": 5,
+  "category": "Science",
+  "question": "What is the chemical symbol for gold?",
+  "answers": [
+    {
+      "text": "Go",
+      "isCorrect": false
+    },
+    {
+      "text": "Gl",
+      "isCorrect": false
+    },
+    {
+      "text": "Au",
+      "isCorrect": true
+    },
+    {
+      "text": "Ag",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929c"
+  },
+  "id": 6,
+  "category": "Science",
+  "question": "Which of the following is not a state of matter?",
+  "answers": [
+    {
+      "text": "Plasma",
+      "isCorrect": false
+    },
+    {
+      "text": "Liquid",
+      "isCorrect": false
+    },
+    {
+      "text": "Energy",
+      "isCorrect": true
+    },
+    {
+      "text": "Gas",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929d"
+  },
+  "id": 7,
+  "category": "Music",
+  "question": "Who was the lead singer of Queen?",
+  "answers": [
+    {
+      "text": "Roger Taylor",
+      "isCorrect": false
+    },
+    {
+      "text": "Brian May",
+      "isCorrect": false
+    },
+    {
+      "text": "Freddie Mercury",
+      "isCorrect": true
+    },
+    {
+      "text": "John Deacon",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929e"
+  },
+  "id": 8,
+  "category": "Music",
+  "question": "Which instrument has 88 keys?",
+  "answers": [
+    {
+      "text": "Organ",
+      "isCorrect": false
+    },
+    {
+      "text": "Piano",
+      "isCorrect": true
+    },
+    {
+      "text": "Synthesizer",
+      "isCorrect": false
+    },
+    {
+      "text": "Accordion",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e20929f"
+  },
+  "id": 9,
+  "category": "Technology",
+  "question": "Who founded Microsoft?",
+  "answers": [
+    {
+      "text": "Steve Jobs",
+      "isCorrect": false
+    },
+    {
+      "text": "Bill Gates",
+      "isCorrect": true
+    },
+    {
+      "text": "Elon Musk",
+      "isCorrect": false
+    },
+    {
+      "text": "Mark Zuckerberg",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d37ecd14a5ce402e2092a0"
+  },
+  "id": 10,
+  "category": "Technology",
+  "question": "What does CPU stand for?",
+  "answers": [
+    {
+      "text": "Central Processing Unit",
+      "isCorrect": true
+    },
+    {
+      "text": "Computer Personal Unit",
+      "isCorrect": false
+    },
+    {
+      "text": "Central Program Utility",
+      "isCorrect": false
+    },
+    {
+      "text": "Central Processor Underlying",
+      "isCorrect": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67d4f6bc5dec8564f8add65f"
+  },
+  "id": 12,
+  "category": "General Knowledge",
+  "question": "How tall is Aaqib",
+  "answers": [
+    {
+      "text": "huge",
+      "isCorrect": true,
+      "_id": {
+        "$oid": "67d4f6bc5dec8564f8add660"
+      }
+    },
+    {
+      "text": "short",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f6bc5dec8564f8add661"
+      }
+    },
+    {
+      "text": "dwarf",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f6bc5dec8564f8add662"
+      }
+    },
+    {
+      "text": "lol",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f6bc5dec8564f8add663"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d4f79a8ddd150ff6b17d9b"
+  },
+  "id": 13,
+  "category": "Maths",
+  "question": "What is the square root of 4",
+  "answers": [
+    {
+      "text": "2",
+      "isCorrect": true,
+      "_id": {
+        "$oid": "67d4f79a8ddd150ff6b17d9c"
+      }
+    },
+    {
+      "text": "6",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f79a8ddd150ff6b17d9d"
+      }
+    },
+    {
+      "text": "20",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f79a8ddd150ff6b17d9e"
+      }
+    },
+    {
+      "text": "3",
+      "isCorrect": false,
+      "_id": {
+        "$oid": "67d4f79a8ddd150ff6b17d9f"
+      }
+    }
+  ],
+  "__v": 0
+}]

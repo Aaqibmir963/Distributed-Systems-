@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Questions</h1>
+
+      <div class="categorySelector">
+        <label for="categorySelect">Select Category:</label>
+        <select id="categorySelect">
+          <option value="all">All Categories</option>
+        </select>
+        <button id="getQuestionBtn">Get Question</button>
+      </div>
+
+      <div id="questionContainer" class="hidden">
+        <div id="questionText"></div>
+        <div id="answersContainer"></div>
+      </div>
+
+      <div id="resultMessage" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

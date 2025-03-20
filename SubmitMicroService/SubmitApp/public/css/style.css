@@ -1,0 +1,33 @@
+body {
+  background-color: grey;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.answer-input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  background-color: #dff0d8;
+  padding: 10px;
+}
+
+.error {
+  background-color: #f2dede;
+  padding: 10px;
+}

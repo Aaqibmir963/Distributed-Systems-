@@ -1,0 +1,33 @@
+services:
+  submit-app:
+    image: aaqibm563/assignment:submit-app
+    build:
+      context: ./SubmitApp
+    pull_policy: always
+    container_name: submit-app
+    restart: always
+    ports:
+      - "${SUBMIT_HOST_PORT:-4200}:${SUBMIT_PORT:-3200}"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "${SUBMIT_QUESTION_HOST_PORT:-4201}:${SUBMIT_QUESTION_PORT:-5672}"
+      - "${RMQ_ADMIN_HOST_PORT:-4202}:${RMQ_ADMIN_PORT:-15672}"
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RMQ_USER:-admin}
+      - RABBITMQ_DEFAULT_PASS=${RMQ_PASSWORD:-admin}
+    volumes:
+      - rmq-data:/var/lib/rabbitmq
+
+volumes:
+  rmq-data:
+    driver: local

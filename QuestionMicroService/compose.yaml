@@ -1,0 +1,60 @@
+services:
+  question-app:
+    image: aaqibm563/assignment:question-app
+    build:
+      context: ./QuestionApp
+    pull_policy: always
+    container_name: question-app
+    restart: always
+    ports:
+      - "${QUESTION_HOST_PORT:-4000}:${QUESTION_PORT:-3000}"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_HOST=${MONGO_HOST:-mongodb}
+      - MONGO_PORT=${MONGO_PORT:-27017}
+      - MONGO_DB_NAME=${MONGO_DB_NAME:-questions_db}
+    networks:
+      - question-network
+
+  etl-container:
+    image: aaqibm563/assignment:etl
+    build:
+      context: ./ETLContainer
+    pull_policy: always
+    container_name: etl-container
+    restart: always
+    ports:
+      - "${ETL_HOST_PORT:-4001}:${ETL_PORT:-3001}"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_HOST=${MONGO_HOST:-mongodb}
+      - MONGO_PORT=${MONGO_PORT:-27017}
+      - MONGO_DB_NAME=${MONGO_DB_NAME:-questions_db}
+      - RMQ_HOST=${RMQ_HOST:-rabbitmq}
+      - RMQ_PORT=${RMQ_PORT:-4201}
+      - RMQ_USER=${RMQ_USER:-admin}
+      - RMQ_PASSWORD=${RMQ_PASSWORD:-admin}
+      - QUEUE_NAME=${QUEUE_NAME:-SUBMITTED_QUESTIONS}
+    networks:
+      - question-network
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "${MONGO_HOST_PORT:-4002}:${MONGO_PORT:-27017}"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - question-network
+
+volumes:
+  mongodb-data:
+    driver: local
+
+networks:
+  question-network:
+    driver: bridge
