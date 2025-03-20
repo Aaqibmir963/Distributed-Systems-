@@ -8,9 +8,7 @@ const db = require("./lib/db");
 const QUESTION_PORT = process.env.QUESTION_PORT || 3000;
 
 // Middleware to return files
-app.use(express.static(path.join(__dirname, "/public/html")));
-app.use(express.static(path.join(__dirname, "/public/js")));
-app.use(express.static(path.join(__dirname, "/public/css")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Parse JSON requests
 app.use(express.json());

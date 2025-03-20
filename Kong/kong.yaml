@@ -1,33 +1,28 @@
 _format_version: "3.0"
-
 services:
-  # Question App Service
-  - name: question-service
-    url: http://10.0.0.4:4000 # Question app private IP and port
+  - name: Billy
+    url: http://10.0.0.5:4200
     routes:
-      - name: question-route
+      - name: bongo
         paths:
-          - /questionapp # Redirects to the root of the question app
-        strip_path: true # Keep the '/questionapp' path when forwarding
+          - /submit
+        strip_path: true
 
-  # Submit App Service
-  - name: submit-service
-    url: http://10.0.0.5:4200 # Submit app private IP and port
+  - name: Yaki
+    url: http://10.0.0.4:4000
     routes:
-      - name: submit-route
+      - name: doodah
         paths:
-          - /submitapp # Redirects to the root of the submit app
-        strip_path: true # Keep the '/submitapp' path when forwarding
+          - /question
+        strip_path: true
 
 plugins:
   - name: rate-limiting
-    service: question-service
+    service: Billy
     config:
-      minute: 30
-      policy: local
+      minute: 9
 
   - name: rate-limiting
-    service: submit-service
+    service: Yaki
     config:
-      minute: 30
-      policy: local
+      minute: 6

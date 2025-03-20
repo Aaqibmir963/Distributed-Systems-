@@ -1,22 +1,20 @@
 services:
   kong:
-    image: kong:latest
+    image: kong
     container_name: kong
     environment:
       - KONG_DATABASE=off
-      - KONG_DECLARATIVE_CONFIG=/etc/kong/kong.yaml
+      - KONG_DECLARATIVE_CONFIG=/usr/kong.yaml
       - KONG_PROXY_ACCESS_LOG=/dev/stdout
       - KONG_ADMIN_ACCESS_LOG=/dev/stdout
       - KONG_PROXY_ERROR_LOG=/dev/stderr
       - KONG_ADMIN_ERROR_LOG=/dev/stderr
-    ports:
-      - "80:8000" # Kong proxy port
-      - "443:8443" # Kong HTTPS proxy port
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444
+      - KONG_LOG_LEVEL=debug
     volumes:
-      - ./kong.yaml:/etc/kong/kong.yaml
-    networks:
-      - kong-net
-
-networks:
-  kong-net:
-    driver: bridge
+      - ./kong.yaml:/usr/kong.yaml
+    ports:
+      - "80:8000" # kong default API entrypoint for http
+      - "443:8443" # kong default API entrypoint for https
+      # - "127.0.0.1:8001:8001"  # kong admin API (http) - uncomment if needed
+      # - "127.0.0.1:8444:8444"  # kong admin API (https) - uncomment if needed

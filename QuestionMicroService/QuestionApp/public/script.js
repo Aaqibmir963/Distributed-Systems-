@@ -17,7 +17,7 @@ getQuestionBtn.addEventListener("click", getQuestion);
 // Load categories from the server
 async function loadCategories() {
   try {
-    const response = await fetch("/categories");
+    const response = await fetch("/question/categories");
     if (!response.ok) {
       throw new Error("Failed to load categories");
     }
@@ -46,7 +46,7 @@ async function getQuestion() {
   const category = categorySelect.value;
 
   try {
-    const response = await fetch(`/question/${category}`);
+    const response = await fetch(`/question/question/${category}`);
     if (!response.ok) {
       throw new Error("Failed to load question");
     }

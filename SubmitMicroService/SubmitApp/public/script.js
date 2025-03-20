@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to fetch categories from the server
   async function fetchCategories() {
     try {
-      const response = await fetch("/categories");
+      const response = await fetch("/submit/categories");
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to submit a question to the server
   async function submitQuestion(questionData) {
     try {
-      const response = await fetch("/submit", {
+      const response = await fetch("/submit/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

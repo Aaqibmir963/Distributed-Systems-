@@ -43,9 +43,7 @@ const QUESTION_SERVICE_URL =
   process.env.QUESTION_SERVICE_URL || "http://question-app:3000";
 
 // Middleware to return files
-app.use(express.static(path.join(__dirname, "/public/html")));
-app.use(express.static(path.join(__dirname, "/public/js")));
-app.use(express.static(path.join(__dirname, "/public/css")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // RabbitMQ Connection variables
 let gConnection;
@@ -208,9 +206,6 @@ app.get("/", (req, res) => {
   res.json({ message: "Submit app is alive." });
 });
 
-app.get("/Home", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/html/index.html"));
-});
 /**
  * @swagger
  * /categories:
